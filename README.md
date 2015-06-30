@@ -2,7 +2,7 @@
 
 An RSS Feed aggregator built with Sinatra that uses the Pure CSS modules  [Pure.css](http://purecss.io/) to provide responsive screen handling.
 
-![Puresong screenshot](http://vizi.ca/images/poplite.png)
+![Puresong screenshot](http://vizi.ca/images/rss_feeder.png)
 
 ## Audience
 
