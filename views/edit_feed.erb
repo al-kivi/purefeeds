@@ -1,0 +1,5 @@
+<h2>Edit Feed</h2>
+<form action="/feeds/<%= @feed.id %>" method="POST">
+	<input name="_method" type="hidden" value="PUT" />
+	<%= erb :feed_form %>
+</form>

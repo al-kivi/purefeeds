@@ -1,0 +1,13 @@
+<label for="title">Title:</label>
+<br>
+<textarea id="summary" rows="1" cols="70" name="feed[title]"><%= @feed.title %></textarea>
+<br>
+<label for="published">Date(mm/dd/yyyy):</label>
+<br>
+<input id="published" name="feed[published]" type="text" value="<%= @feed.published.strftime("%m/%d/%Y") if @feed.published %>" />
+<br>
+<label for="summary">Summary:</label>
+<br>
+<textarea id="summary" rows="8" cols="70" name="feed[summary]"><%= @feed.summary %></textarea>
+<br><br>
+<input type="button" class="secondary-button pure-button" value="Save Feed" />

@@ -1,0 +1,8 @@
+<h2><%= @feed.title %></h2>
+<p>Published Date: <%= @feed.published.strftime("%e %B %Y") if @feed.published %></p>
+<p><%= @feed.summary %></p>
+<br>
+
+<a href="/feeds/<%= @feed.id %>/edit"><button class="secondary-button pure-button">Edit</button></a>&nbsp&nbsp
+<a href="/feeds/<%= @feed.id %>/delete"><button class="secondary-button pure-button">Delete</button></a>&nbsp&nbsp
+<a href="/feeds"><button class="secondary-button pure-button">Go back</button></a>

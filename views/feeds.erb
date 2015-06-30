@@ -1,0 +1,18 @@
+<h3>Feeds</h3>
+<% if @feeds.any? %>
+	<ul id="feeds">
+  	<% @feeds.each do |feed| %>
+   		<li>
+   		  <h3><a href="/feeds/<%= feed.id %>" style="text-decoration: none"><%= feed.title %></a></h3>
+        <b>Published Date:</b> &nbsp<%= feed.published %><br>   		   
+   		  <%= feed.summary %><br>
+   		  <a href="<%= feed.url %>">Read story</a>
+   		  </li>
+   		<br>
+  	<% end %>
+	</ul>
+<% else %>
+	<p>No feeds have been created yet!</p>
+<% end %>
+<a href="/feeds/new"><button class="secondary-button pure-button">New feed</button></a>
+<br><br><br><br><br>

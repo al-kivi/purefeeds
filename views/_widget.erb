@@ -1,0 +1,30 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript" src="/js/richhtmlticker.js">
+
+  /***********************************************
+  * Rich HTML Ticker- by JavaScript Kit (www.javascriptkit.com)
+  * This notice must stay intact for usage
+  * Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+  ***********************************************/
+
+</script>
+
+<style type="text/css"> 
+  .tickerstyle{width:300px; height:300px; border:1px solid black; background:lightyellow; padding:8px; overflow:hidden;}
+  .messagediv{display: none;background:lightyellow}
+</style>
+
+<div id="myhtmlticker" class="tickerstyle">
+
+  <% @feeds.each do |feed| %>
+    <div class="messagediv">
+      <b><a href="<%= feed.url %>"><%= feed.title %></a></b><br />
+      <%= feed.published %><br>
+      <%= feed.summary %>
+    </div> 
+  <% end %>
+
+</div>
+
+
+

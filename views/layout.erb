@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A layout example without a side menu, just like the Pure website.">
+
+  <title><%= @title || 'The RSS Feeder' %></title>
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"> 
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="/stylesheets/poplite.css">
+  <link rel="icon" href="/favicon.ico" />
+
+</head>
+<body>
+
+  <div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href=""><b>PUREFEEDS</b></a>
+    
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item <%= active[0] %>"><a href="/" class="pure-menu-link">Home</a></li>
+        <li class="pure-menu-item <%= active[1] %>"><a href="/feeds" class="pure-menu-link">Feeds</a></li>          
+        <li class="pure-menu-item <%= active[2] %>"><a href="/widget" class="pure-menu-link">Widget</a></li>
+        <li class="pure-menu-item <%= active[3] %>"><a href="/contact" class="pure-menu-link">Contact</a></li> 
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-wrap-plain">
+    <div class="content">
+      <br><br>
+      <h1>RSS Feed Aggregator</h1>
+      <h2>A <bold>Poplite</bold> application</h2>   
+      <br>
+      
+      <%= yield %>
+    </div>
+  </div>
+  
+  <div class="footer f-box is-center">
+    A Poplite example application. Brought to you by <a href="http://vizi.ca">Vizica Consulting</a>
+  </div>
+  
+<script src="js/ui.js"></script>
+
+</body>
+</html>
